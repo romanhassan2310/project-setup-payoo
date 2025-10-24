@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- daisyUi cnd  -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- tailwind css  cnd -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+     <!-- font awesome cdn  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-[#f4f5f7] h-[100vh] ">
+
+
+    <div class="max-w-lg mx-auto bg-white items-center">
+        <div class=" min-h[50px] flex justify-between items-center
+     border-b-2 border-gray-300 p-3">
+       <div class="flex items-center">
+        <img class="" src="assets/Group.png" alt="">
+          <div>
+            <h2 class="font-bold text-2xl">$ <span id="available-balance">45000</span></h2>
+            <p class="text-[#08080880]">Available Balance</p>
+          </div>
+     </div>
+       
+       <div class="">
+          <button class="btn text-[#08080880] text-2xl rounded-2xl pl-[10px]"> <i class="fa-solid fa-right-from-bracket rotate-180 text-gray-700"></i>Log Out</button>
+       </div>
+    </div>
+
+    <div class=" mt-8">
+        
+        <h1 class="font-bold text-3xl p-8 mt-[-50px] ">🔥 Welcome to Payooo!</h1>
+        <br>
+        <p class="text-[#08080880] p-8 mt-[-80px]">Enjoy easy and convenient financial services with us.<br>Cashout charge is low and </p>
+    </div>
+
+    <div class=" min-h-[300px]
+     grid grid-cols-3  gap-4  p-8 mt-[-50px]">
+        <div id="add-money-button" class="border-2 border-gray-300 text-center p-3 rounded-lg shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/wallet1.png" alt="">
+            <h2 class="justify-center items-center">Add Money</h2>
+        </div>
+        <div id="cash-out-button" class="border-2 border-gray-300 text-center p-3 rounded-xl shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/send1.png" alt="">
+            <h2 class="">Cashout</h2> 
+        </div> 
+        <div id="transfer-money-button" class="border-2 border-gray-300 text-center p-3 rounded-xl shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/money1.png"  alt="">
+            <h2 class="">Transfer Money</h2> 
+        </div> 
+        <div id="get-bonus-button" class="border-2 border-gray-300 text-center p-3 rounded-xl shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/bonus1.png"  alt="">
+            <h2 class="">Bonus</h2> 
+        </div> 
+        <div id="pay-bill-button" class="border-2 border-gray-300 text-center p-3 rounded-xl shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/purse1.png"  alt="">
+            <h2 class="">Pay Bill</h2> 
+        </div> 
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl shadow-md">
+            <img class="mx-auto mb-2 h-12" src="assets/transaction1.png" alt="">
+            <h2>Transactions</h2>
+        </div>
+    </div>
+    </div>
+
+    <div class="all-form-sections max-w-lg mx-auto p-8 bg-white">
+        <!-- add money  -->
+         <div id="add-money-parent" class="mt-[-50px]">
+            <h1 class=" font-bold text-xl">Add Money</h1>
+            
+            <form action="" class="w-full">
+                <br>
+                <div>
+                    <h3>Select A Bank</h3>
+                    <select id="bank" class="select select-primary rounded-2xl bg-gray-200 w-full mt-5 ">
+                        <option disabled selected>Select bank</option>
+                        <option>Sonali Bank</option>
+                        <option>Bangladesh Krishi Bank</option>
+                        <option>City Bank</option>
+                        <option>Agrani Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                    </select>
+
+                </div>
+            <br>
+                <div>
+                    <h1>Bank Account Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="bank-account-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 11 digit account number" />
+                   </fieldset>
+                </div>
+                   
+                <div>
+                    <h1 class="mt-3">Account to Add</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-amount" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Add amount to withdraw" />
+                   </fieldset>
+                </div>
+        
+            
+                <div>
+                   <h1 class="mt-3"> Pin Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-pin-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 4 digit pin number" />
+                   </fieldset>
+                </div>
+                <div>
+                    <button  id="btn-add-money" class="btn bg-[#0874F2] text-white w-full 
+                    font-semibold rounded-2xl text-xl mt-3">Add Money</button>
+                </div>
+              </form>
+             </div>
+
+             <!-- Cash Out -->
+         <div id="cash-out-parent">
+             <h1 class=" font-bold text-xl">Cash Out</h1>
+
+                    <form action="" class="w-full">
+        
+            <br>
+                <div>
+                    <h1>Agent Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="agent-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 11 digit agent number" />
+                   </fieldset>
+                </div>
+                   
+                <div>
+                    <h1 class="mt-3">Amount</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="withdraw-amount" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter amount to withdraw" />
+                   </fieldset>
+                </div>
+        
+            
+                <div>
+                   <h1 class="mt-3"> Pin Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-pin" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 4 digit pin number" />
+                   </fieldset>
+                </div>
+                <div>
+                    <button  id="btn-withdraw" class="btn bg-[#0874F2] text-white w-full font-semibold rounded-2xl text-xl mt-3">Withdraw Money</button>
+                </div>
+              </form>
+             </div>
+
+
+             <!-- Transfer Money -->
+
+             <div id="transfer-money-parent">
+             <h1 class=" font-bold text-xl">Transfer Money</h1>
+
+                    <form action="" class="w-full">
+        
+            <br>
+                <div>
+                    <h1>User Account Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="agent-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 11 digit agent number" />
+                   </fieldset>
+                </div>
+                   
+                <div>
+                    <h1 class="mt-3">Amount</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-amount" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter amount to withdraw" />
+                   </fieldset>
+                </div>
+        
+            
+                <div>
+                   <h1 class="mt-3"> Pin Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-pin" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 4 digit pin number" />
+                   </fieldset>
+                </div>
+                <div>
+                    <button  id="btn-withdraw" class="btn bg-[#0874F2] text-white w-full font-semibold rounded-2xl text-xl mt-3">Send Now</button>
+                </div>
+              </form>
+             </div>
+
+             <!-- Get Bonus -->
+              <div id="get-bonus-parent">
+             <h1 class=" font-bold text-xl">Get Bonus</h1>
+
+                    <form action="" class="w-full">
+        
+            <br>
+                <div>
+                    <h1>Enter Bonus Coupon</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="agent-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter your coupon" />
+                   </fieldset>
+                </div>
+                
+                <div>
+                    <button  id="btn-withdraw" class="btn bg-[#0874F2] text-white w-full font-semibold rounded-2xl text-xl mt-3">Get Bonus</button>
+                </div>
+              </form>
+             </div>
+
+             <!-- Pay Bill Section -->
+              <div id="pay-bill-parent" class="mt-[-50px]">
+            <h1 class=" font-bold text-xl">Pay Bill</h1>
+            
+            <form action="" class="w-full">
+                <br>
+                <div>
+                    <h3>Select To Pay</h3>
+                    <select id="bank" class="select select-primary rounded-2xl bg-gray-200 w-full mt-5 ">
+                        <option disabled selected>Select back</option>
+                        <option>Bkash</option>
+                        <option>Nagad</option>
+                        <option>Rocket</option>
+                        <option>Upay</option>
+                        <option>Bank</option>
+                    </select>
+
+                </div>
+            <br>
+                <div>
+                    <h1>Bank Account Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="bank-account-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter account number" />
+                   </fieldset>
+                </div>
+                   
+                <div>
+                    <h1 class="mt-3">Account to Add</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-amount" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Add amount to pay" />
+                   </fieldset>
+                </div>
+        
+            
+                <div>
+                   <h1 class="mt-3"> Pin Number</h1>
+                    <fieldset class="fieldset">
+                     <legend class="fieldset-legend"></legend>
+                     <input id="add-pin-number" type="text" class="input rounded-2xl bg-gray-200 w-full " placeholder="Enter 4 digit pin number" />
+                   </fieldset>
+                </div>
+                <div>
+                    <button  id="btn-add-money" class="btn bg-[#0874F2] text-white w-full 
+                    font-semibold rounded-2xl text-xl mt-3">Pay Now</button>
+                </div>
+              </form>
+             </div>
+
+
+
+
+         
+
+    </div>
+
+       
+
+    <!-- JavaScript File Connected  -->
+     <script src="js/home.js"></script>
+    
+</body>
+</html>
